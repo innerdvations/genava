@@ -56,11 +56,13 @@ module.exports = {
       
       // generate any colors needed. since generating nice looking random colors is hard, we'll eventually offer some presets, but for now we'll just allow 'random'
       // eventually we will add more after reading http://tools.medialab.sciences-po.fr/iwanthue/theory.php and learning about mathematical color theory :)
-      srand.seed(seed);
-      colors = JSON.parse(JSON.stringify(theme.colors)); // clone theme.colors so we can generate our own for just this seed
-      for(color in colors) {
-        // [r, g, b, brightness, saturation, hue]
-        if(colors[color] === "random") colors[color] = [srand.random() * 50, srand.random() * 50, srand.random() * 50, 100, 100, srand.random() * 200];
+      if(theme.colors) {
+        srand.seed(seed);
+        colors = JSON.parse(JSON.stringify(theme.colors)); // clone theme.colors so we can generate our own for just this seed
+        for(color in colors) {
+          // [r, g, b, brightness, saturation, hue]
+          if(colors[color] === "random") colors[color] = [srand.random() * 50, srand.random() * 50, srand.random() * 50, 100, 100, srand.random() * 200];
+        }
       }
       
       // select all the parts and modify them as needed
@@ -72,22 +74,23 @@ module.exports = {
         path = options.theme_path + '/' + part + '_' + part_num + '.png';
         image = gm(path);
         flush = false; // gm doesn't support .in() with a buffer, so if we made changes we need to flag this to be dumped to file first
-        if(typeof part_data.color === "string") {
+        if(colors && part_data.color) {
           flush = true;
-          image.colorize(colors[part_data.color][0], colors[part_data.color][1], colors[part_data.color][2]);
-          if(typeof colors[part_data.color][5] !== 'undefined') {
-            image.modulate(colors[part_data.color][3], colors[part_data.color][4], colors[part_data.color][5]);
+          if(typeof part_data.color === "string") { // if a specific color, use that color for all parts_nums
+            image.colorize(colors[part_data.color][0], colors[part_data.color][1], colors[part_data.color][2]);
+            if(typeof colors[part_data.color][5] !== 'undefined') {
+              image.modulate(colors[part_data.color][3], colors[part_data.color][4], colors[part_data.color][5]);
+            }
           }
-        }
-        else if(part_data.color) {
-          for(color in part_data.color) {
-            if(part_data.color[color].indexOf(part_num) !== -1) {
-              flush = true;
-              image.colorize(colors[color][0], colors[color][1], colors[color][2]);
-              if(typeof colors[color][5] !== 'undefined') {
-                image.modulate(colors[color][3], colors[color][4], colors[color][5]);
+          else { // else we'll assume part_data.color is an object listing which color this specific part_num should be
+            for(color in part_data.color) {
+              if(part_data.color[color].indexOf(part_num) !== -1) {
+                image.colorize(colors[color][0], colors[color][1], colors[color][2]);
+                if(typeof colors[color][5] !== 'undefined') {
+                  image.modulate(colors[color][3], colors[color][4], colors[color][5]);
+                }
+                break;
               }
-              break;
             }
           }
         }
