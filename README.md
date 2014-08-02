@@ -68,6 +68,7 @@ Note that generating images can be processor and memory intensive, so it is high
 * more built-in themes (just submit a pull request or email them to me)
 
 ## Credits
-[Andreas Gohr](http://www.splitbrain.org/personal) for the original PHP monsterid library and concept.
-[Gabriele D'arrigo](https://github.com/gabrieledarrigo) for the nodejs conversion this was based on.
-[Ketherine Garner] (http://kathgarner.com/) for creating the hand-drawn monster theme "Lemm".
+
+* [Andreas Gohr](http://www.splitbrain.org/personal) for the original PHP monsterid library and concept.
+* [Gabriele D'arrigo](https://github.com/gabrieledarrigo) for the nodejs conversion this was based on.
+* [Ketherine Garner] (http://kathgarner.com/) for creating the hand-drawn monster theme "Lemm".
