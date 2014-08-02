@@ -1,0 +1,53 @@
+{
+  "author":     "Lemm ( http://kathgarner.com/ )",
+  "name":       "lemm",
+  "version":    "1.0.0",
+  "size":       120,
+  "colors":     {
+    "body":  "random",
+    "white": "random",
+    "arms":  "random",
+    "legs":  "random",
+    "hair":  "random",
+    "mouth": "random"
+  },
+  "parts": {
+    "legs": {
+      "parts": [1, 2, 3, 4, 5, "S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "S11", "S12", "S13"],
+      "color": {
+        "body": ["S5", "S13"],
+        "legs": [1, 2, 3, 5, "S1", "S2", "S3", "S4", "S6", "S7", "S10", "S12"],
+        "white": [4, "S11"]
+      }
+    },
+    "hair": {
+      "parts": [1, 2, 3, 4, 5, "S1", "S2", "S3", "S4", "S5", "S6", "S7"],
+      "color": {
+        "hair": ["S1", "S2", "S3", "S5"],
+        "white": [1, 2, 3, 5]
+      }
+    },
+    "arms": {
+      "parts": [1, 2, 3, 4, 5, "S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9"],
+      "color": {
+        "body": ["S8"],
+        "arms": [3, 4, 5, "S1", "S3", "S5", "S6", "S7", "S9"],
+        "white": [1, 2, "S4"]
+      }
+    },
+    "body": {
+      "parts": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, "S1", "S2", "S3", "S4", "S5"],
+      "color": "body"
+    },
+    "eyes": {
+      "parts": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, "S1", "S2", "S3", "S4", "S5"]
+    },
+    "mouth": {
+      "parts": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "S1", "S2", "S3", "S4", "S5", "S6", "S7"],
+      "color": {
+        "body": ["S4", "S5"],
+        "mouth": [3, 4, 7, 10, "S6"]
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "author":     "Unknown",
+  "name":       "default",
+  "version":    "2.0.0",
+  "width":       120,
+  "height":       120,
+  "colors":     {
+    "rand1":  "random",
+    "rand2":  "random"
+  },
+  "parts": {
+    "legs": {
+      "parts": 5
+    },
+    "hair": {
+      "parts": 5
+    },
+    "arms": {
+      "parts": 5
+    },
+    "body": {
+      "parts": 15,
+      "color": "rand1"
+    },
+    "eyes": {
+      "parts": 15
+    },
+    "mouth": {
+      "parts": 10
+    }
+  }
+}
