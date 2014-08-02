@@ -8,6 +8,17 @@ There are currently two themes: "default" is a port of the monsterid theme from 
 
 Note that generating images can be processor and memory intensive, so it is highly recommended that all files generated are cached, as seen in the example below.
 
+## Example avatars
+
+### default theme
+![default123](/themes/default/examples/default123.png)
+![ff213](/themes/default/examples/ff213.png)
+
+### lemm theme
+![a232h42h](/themes/lemm/examples/a232h42h.png)
+![bododo](/themes/lemm/examples/bododo.png)
+![yar](/themes/lemm/examples/yar.png)
+
 ## Installation
 
     $ npm install genava
