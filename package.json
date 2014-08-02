@@ -1,25 +1,36 @@
 {
-	"name" : "genava",
-	"version" : "0.0.1",
-	"description" : "Generate a composite avatar image from random source parts (arms, legs, body, etc); based on monsterid",
-	"main" : "index.js",
-	"author" : {
-		"name" : "Ben Irvin",
-		"email": "ben@innerdvations.com",
-		"url"  : "https://github.com/innerdvations"
-	},
-	"keywords" : ["monsterid","monster","avatar","image","composite","generate"],
-	"repository" : {
-	    "type": "git",
-	    "url": "https://github.com/innerdvations/genava.git"
-	 },
-	"dependencies" : {
-		"gm" : "*",
-		"temp" : "*",
+  "name": "genava",
+  "version": "1.0.1",
+  "description": "Generate a composite avatar image from random source parts (arms, legs, body, etc); based on monsterid",
+  "main": "index.js",
+  "author": "Ben Irvin <ben@innerdvations.com> (https://github.com/innerdvations)",
+  "keywords": [
+    "monsterid",
+    "monster",
+    "avatar",
+    "image",
+    "gravatar",
+    "composite",
+    "generate"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/innerdvations/genava.git"
+  },
+  "dependencies": {
+    "gm": "*",
+    "temp": "*",
     "fs": "*",
-		"srand" : "1.1.x",
+    "srand": "1.1.x",
     "crypto": "0.0.3",
     "async": "*"
-	},
-	"readmeFilename": "README.md"
+  },
+  "bugs": {
+    "url": "https://github.com/innerdvations/genava/issues"
+  },
+  "homepage": "https://github.com/innerdvations/genava",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
 }
