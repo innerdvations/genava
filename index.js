@@ -1,7 +1,7 @@
 var gm = require('gm');
 var temp = require('temp');
 var fs = require('fs');
-var srand = require('srand');
+var srand = require('random-seed').create();
 var crypto = require('crypto');
 var async = require('async');
 

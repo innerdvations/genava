@@ -1,6 +1,6 @@
 {
   "name": "genava",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Generate a composite avatar image from random source parts (arms, legs, body, etc); based on monsterid",
   "main": "index.js",
   "author": "Ben Irvin <ben@innerdvations.com> (https://github.com/innerdvations)",
@@ -20,7 +20,7 @@
   "dependencies": {
     "gm": "*",
     "temp": "*",
-    "srand": "1.1.x",
+    "random-seed": "*",
     "crypto": "0.0.3",
     "async": "*"
   },
